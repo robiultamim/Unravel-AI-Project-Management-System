@@ -1,0 +1,129 @@
+/* team.css - Team leader styles */
+
+.team-container {
+    padding: 20px;
+    background: #f5f7fb;
+    min-height: calc(100vh - 80px);
+}
+
+.projects-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-accordion-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.project-accordion-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.project-accordion-header:hover {
+    background: #e9ecef;
+}
+
+.project-accordion-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    flex: 1;
+}
+
+.project-accordion-header i {
+    transition: transform 0.3s ease;
+    color: var(--gray);
+}
+
+.project-accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.project-accordion-content p {
+    padding: 20px;
+    margin: 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-bottom: 1px solid var(--border);
+}
+
+.team-members {
+    padding: 20px;
+}
+
+.team-members h5 {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.member-card {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--border);
+}
+
+.member-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.member-email {
+    color: var(--gray);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.member-role .badge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+}
+
+.text-center {
+    text-align: center;
+    padding: 40px;
+    color: var(--gray);
+}

@@ -1,0 +1,167 @@
+/* manager.css - Manager specific styles */
+
+.manager-container {
+    padding: 20px;
+    background: #f5f7fb;
+    min-height: calc(100vh - 80px);
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-item {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.project-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project-info p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.project-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.project-meta i {
+    margin-right: 5px;
+}
+
+.add-member-form {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.add-member-form h4 {
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.team-table h4 {
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.team-table .table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--gray);
+    border-bottom: 2px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Badge styles */
+.badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.badge-success { background: #d4edda; color: #155724; }
+.badge-warning { background: #fff3cd; color: #856404; }
+.badge-info { background: #d1ecf1; color: #0c5460; }
+.badge-secondary { background: #e9ecef; color: var(--dark); }
+.badge-danger { background: #f8d7da; color: #721c24; }
+.badge-primary { background: #cce5ff; color: #004085; }
+
+/* Form row alignment */
+.add-member-form .form-row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.add-member-form .form-group {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 0;
+}
+
+.add-member-form .form-group:last-child {
+    flex: 0 0 auto;
+}
+
+.add-member-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+/* Text utilities */
+.text-center {
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .add-member-form .form-row {
+        flex-direction: column;
+    }
+    
+    .add-member-form .form-group {
+        min-width: 100%;
+    }
+    
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+}

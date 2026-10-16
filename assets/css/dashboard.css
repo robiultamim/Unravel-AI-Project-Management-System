@@ -1,0 +1,294 @@
+/* Sidebar Styles */
+.sidebar {
+    width: var(--sidebar-width);
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header .logo i {
+    margin-right: 10px;
+}
+
+.sidebar-menu {
+    padding: 15px 0;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    color: var(--dark);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+    border-left: 4px solid var(--primary);
+}
+
+.menu-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.user-details .user-name {
+    font-weight: 500;
+}
+
+.user-details .user-role {
+    font-size: 0.8rem;
+    color: var(--gray);
+    text-transform: capitalize;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-role {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: white;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--primary);
+}
+
+.stat-label {
+    color: var(--gray);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Health items */
+.health-item {
+    margin-bottom: 15px;
+}
+
+.health-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.health-value {
+    font-weight: 600;
+}
+
+.health-bar {
+    height: 5px;
+    background: #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.health-progress {
+    height: 100%;
+}
+
+/* Approval items */
+.approval-item {
+    padding: 15px;
+    background: #fff3cd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.approval-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.approval-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+/* Task items */
+.task-item {
+    padding: 15px;
+    background: #e6f7ff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.task-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.task-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+/* Progress items */
+.progress-item {
+    margin-bottom: 15px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.progress-value {
+    font-weight: 600;
+}
+
+
+
+/* Team members */
+.team-member {
+    margin-bottom: 15px;
+}
+
+.member-name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.member-percentage {
+    font-weight: 600;
+}
+
+
+/* SOS Button */
+.sos-button {
+    background: var(--warning);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.sos-button:hover {
+    background: #e11571;
+}
+
+.sos-button i {
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: left 0.3s;
+        z-index: 1000;
+    }
+    
+    .sidebar.active {
+        left: 0;
+    }
+    
+    .main-content {
+        padding: 10px;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-role {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,38 @@
+# ============================================
+# Unravel - .gitignore
+# ============================================
+
+# Environment and sensitive credential files
+.env
+.env.local
+.env.*.local
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Server & Application Logs
+*.log
+error_log
+access_log
+
+# Temporary & Cache Files
+*.tmp
+*.bak
+temp/
+cache/
+
+# User Uploads (keep directory structure)
+uploads/profiles/*
+!uploads/profiles/.gitkeep
